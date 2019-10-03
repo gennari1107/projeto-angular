@@ -1,0 +1,9 @@
+<section>
+  <h2 class="text-center m-3">Lista de Tarefas</h2>
+  <div class="lista-tarefas p-2" *ngFor="let tarefa of listaTarefas">
+    <p class="border-bottom">
+      <a [routerLink]="['/detalhe', tarefa.id ]">{{ tarefa.nome }}</a>
+      - Completo: {{ tarefa.completo ? 'Sim' : 'Não' }}
+    </p>
+  </div>
+</section>

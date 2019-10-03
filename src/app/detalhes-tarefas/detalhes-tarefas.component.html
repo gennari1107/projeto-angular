@@ -1,0 +1,6 @@
+<h4>Detalhes da Tarefa</h4>
+<div *ngIf="tarefa">
+  <h3>{{ tarefa.nome }}</h3>
+  <h4>{{ tarefa.descricao }}</h4>
+  <p>{{ tarefa.completo ? 'Tarefa Completa' : 'Tarefa não Completa'}}</p>
+</div>
