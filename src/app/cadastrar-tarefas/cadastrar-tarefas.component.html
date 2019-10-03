@@ -1,1 +1,19 @@
-<p>cadastrar-tarefas works!</p>
+<form [formGroup]="checkoutForm" (ngSubmit)="submitForm()">
+
+    <div>
+        <h3>Cadastrar</h3>
+        <label for="nome">
+            Nome da Tarefa
+        </label>
+        <input id="nome" type="text" formControlName="nome" [(ngModel)]="nome" />
+    </div>
+
+    <div>
+        <label for="descricao">
+            Descrição
+        </label>
+        <input id="descricao" type="text" formControlName="descricao" [(ngModel)]="descricao" />
+    </div>
+
+    <button class="button" type="submit">Salvar</button>
+</form>

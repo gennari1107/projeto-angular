@@ -6,6 +6,7 @@ import { ListaTarefasComponent } from './lista-tarefas/lista-tarefas.component';
 import { CadastrarTarefasComponent } from './cadastrar-tarefas/cadastrar-tarefas.component';
 import { ConsultaStatusComponent } from './consulta-status/consulta-status.component';
 
+
 const routes: Routes = [
   { path: '', component: ListaTarefasComponent },
   { path: 'cadastro', component: CadastrarTarefasComponent },

@@ -54,4 +54,23 @@ export class TarefasService {
     const index = this.tarefas.findIndex(item => item.id === id);
     return this.tarefas[index];
   }
+  //
+  mudaStatusTarefa(id) {
+    const index = this.tarefas.findIndex(item => item.id === id);
+    this.tarefas[index].completo = !this.tarefas[index].completo;
+  }
+
+  excluiTarefa(id) {
+    const index = this.tarefas.findIndex(item => item.id === id);
+    this.tarefas.splice(index, 1);
+  }
+
+  cadastroTarefa(nome, descricao) {
+    this.tarefas.push({
+      id: this.tarefas[this.tarefas.length - 1].id + 1,
+      nome: nome,
+      descricao: descricao,
+      completo: false
+    });
+  }
 }
