@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { TarefasService } from './../tarefas.service';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-consulta-status',
@@ -6,10 +7,23 @@ import { Component, OnInit } from '@angular/core';
 
 })
 export class ConsultaStatusComponent implements OnInit {
-
-  constructor() { }
+  tarefas;
+  status;
+  
+  constructor(
+    private tarefaService: TarefasService
+  ) { }
 
   ngOnInit() {
+    this.status = true;
+    this.tarefas = this.tarefaService.consultaStatusTarefa(this.status);
   }
+
+  completoStatus() {
+    this.status = !this.status;
+    this.tarefas = this.tarefaService.consultaStatusTarefa(this.status);
+  }
+ 
+
 
 }

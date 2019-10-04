@@ -73,4 +73,9 @@ export class TarefasService {
       completo: false
     });
   }
+  
+  consultaStatusTarefa(status: boolean) {
+    return this.tarefas.filter(item => item.completo === status);
+  }
+  
 }

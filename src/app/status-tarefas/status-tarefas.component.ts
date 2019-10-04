@@ -1,4 +1,3 @@
-import { ActivatedRoute } from '@angular/router';
 import { TarefasService } from './../tarefas.service';
 import { Component, OnInit, Input } from '@angular/core';
 
@@ -17,7 +16,7 @@ export class StatusTarefasComponent implements OnInit {
   }
 
   mudaStatus() {
-    this.tarefas.mudaStatusTarefa(this.tarefa.id);
+    this.tarefas.consultaStatusTarefa(this.tarefa.id);
   }
 
 }
